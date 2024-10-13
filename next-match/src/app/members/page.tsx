@@ -1,12 +1,14 @@
-import { Button, Link } from '@nextui-org/react'
 import React from 'react'
-import { FaRegSmile } from 'react-icons/fa'
+import { getMembers } from '../actions/memberActions'
+import MemberCard from './MemberCard'
 
-export default function MembersPage() {
+export default async function MembersPage() {
+  const members = await getMembers()
   return (
-    <div>
-        <h3 className='text-3xl'>Members Page</h3>
-        <Link href='/'>Voltar para a home</Link>
+    <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8'>
+      {members && members.map(member => (
+        <MemberCard key={member.id} member={member} />
+      ))}
     </div>
   )
 }
