@@ -16,6 +16,7 @@ npm install prisma --save-dev
 npm install bcryptjs
 npm install -D @types/bcryptjs
 npm install --save react-toastify
+npm install date-fns
 
 Iniciar o prisma
 
