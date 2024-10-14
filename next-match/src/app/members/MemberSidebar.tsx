@@ -12,10 +12,10 @@ type Props = {
 
 export default function MemberSidebar({ member }: Props) {
     const pathname = usePathname()
-    const basePath = `/members/${member.userId}`
+    const basePath = `/members/${member.id}`
     const navLinks = [
-        {name: 'Profile', href: `${basePath}`},
-        {name: 'Photos', href: `${basePath}/photos`},
+        {name: 'Perfil', href: `${basePath}`},
+        {name: 'Fotos', href: `${basePath}/photos`},
         {name: 'Chat', href: `${basePath}/chat`},
     ]
     

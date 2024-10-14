@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import TopNav from "@/components/navbar/TopNav";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: "NextMatch",
@@ -17,12 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Suspense fallback={<Loading />}>
         <Providers>
           <TopNav />
           <main className='container mx-auto'>
             {children}
           </main>
         </Providers>
+        </Suspense>
       </body>
     </html>
   );
