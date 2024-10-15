@@ -16,8 +16,8 @@ export default async function MemberEditPage() {
         </CardHeader>
         <Divider />
         <CardBody>
-           <EditForm member={member} />
+        <EditForm member={member} />
         </CardBody>
-    </>
+      </>
     )
 }

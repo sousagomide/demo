@@ -18,6 +18,8 @@ npm install -D @types/bcryptjs
 npm install --save react-toastify
 npm install date-fns
 
+npm install cloudinary next-cloudinary
+
 Iniciar o prisma
 
 npx prisma init
@@ -39,3 +41,5 @@ Visualizar as tabelas:
 	http://localhost:5555
 	
 "@nextui-org/react": "2.4.8",
+
+Servidor usado para hospedar imagens: Cloudinary
