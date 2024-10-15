@@ -31,6 +31,9 @@ Gerar as tabelas a partir do Prisma
 npx prisma generate
 npx prisma db push
 
+npm i -D ts-node
+npx prisma db seed
+
 Visualizar as tabelas: 
 	npx prisma studio
 	http://localhost:5555
